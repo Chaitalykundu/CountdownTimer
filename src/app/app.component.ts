@@ -14,6 +14,7 @@ import { interval, Subscription } from 'rxjs';
 
 export class AppComponent implements OnInit, OnDestroy {
   title = 'CountdownTimer';
+  imgURL = 'assets/Balloon-Border.png';
   targetDate = new Date('2024-10-06T00:00:00'); // Target date: 6th October 2024
   timeRemaining: string = '';
   private subscription: Subscription = new Subscription();
