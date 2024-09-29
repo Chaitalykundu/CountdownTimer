@@ -13,7 +13,7 @@ import { interval, Subscription } from 'rxjs';
 
 
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'CountdownTimer';
+  title="CountdownTimer"
   imgURL = 'assets/Balloon-Border.png';
   targetDate = new Date('2024-10-06T00:00:00'); // Target date: 6th October 2024
   timeRemaining: string = '';
@@ -42,7 +42,9 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
