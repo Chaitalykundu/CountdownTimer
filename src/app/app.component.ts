@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, OnDestroy {
     const difference = this.targetDate.getTime() - now;
 
     if (difference <= 0) {
-      this.timeRemaining = 'Time’s up!';
+      this.timeRemaining = 'Happy Birthday!';
       this.subscription.unsubscribe();
       return;
     }
