@@ -1,6 +1,7 @@
 import { RouterOutlet } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ import { interval, Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
   title="CountdownTimer"
   imgURL = 'assets/Balloon-Border.png';
-  targetDate = new Date('2024-10-06T00:00:00'); // Target date: 6th October 2024
+  targetDate = new Date('2024-10-05T23:55:30'); // Target date: 6th October 2024
   timeRemaining: string = '';
   private subscription: Subscription = new Subscription();
 
@@ -36,6 +37,7 @@ export class AppComponent implements OnInit, OnDestroy {
     const difference = this.targetDate.getTime() - now;
 
     if (difference <= 0) {
+      NgClass 
       this.timeRemaining = 'Happy Birthday!';
       this.subscription.unsubscribe();
       return;
